@@ -255,6 +255,7 @@ module.exports = function(model, options, excludedMap) {
       })
     } else {
       for (const key in cleanBody) {
+        req.erm.document.set(key, undefined)
         req.erm.document.set(key, cleanBody[key])
       }
 
