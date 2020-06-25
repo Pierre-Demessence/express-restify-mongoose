@@ -224,7 +224,7 @@ module.exports = function(model, options, excludedMap) {
       return dst
     }
 
-    const cleanBody = moredots(depopulate(req.body))
+    const cleanBody = depopulate(req.body)
 
     if (options.findOneAndUpdate) {
       options.contextFilter(contextModel, req, filteredContext => {
